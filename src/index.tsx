@@ -2,6 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
+type SquareState = 'O' | 'X' | null
+type SquareProps = {
+  value: SquareState
+  onClick: () => void
+}
 class Square extends React.Component {
   render() {
     return (
