@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 
 class Square extends React.Component {
@@ -13,7 +13,7 @@ class Square extends React.Component {
 }
 
 class Board extends React.Component {
-  renderSquare(i) {
+  renderSquare(i: number) {
     return <Square />;
   }
 
@@ -61,5 +61,5 @@ class Game extends React.Component {
 
 // ========================================
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root")!);
 root.render(<Game />);
